@@ -4,7 +4,6 @@ pipeline {
     stage('Build') {
       steps {
         echo 'hello build1'
-        git 'http://'
       }
     }
     stage('Test') {
