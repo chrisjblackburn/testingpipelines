@@ -6,8 +6,7 @@ pipeline {
         echo 'hello build1'
       }
     }
-    stage('Label'){}
-    stage('Test') {
+    stage('Testing') {
       steps {
         parallel(
           "Chrome": {
