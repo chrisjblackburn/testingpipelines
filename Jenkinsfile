@@ -4,7 +4,7 @@ pipeline {
     stage('Build') {
       steps {
         echo 'hello build1'
-        sleep '1'
+        sleep '1, SECONDS'
         sh '''#/bin/bash
 echo "Hello"'''
         echo 'Testing 123'
