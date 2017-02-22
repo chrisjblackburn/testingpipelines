@@ -4,9 +4,13 @@ pipeline {
     stage('Build') {
       steps {
         echo 'hello build1'
+        sleep '1'
+        sh '''#/bin/bash
+echo "Hello"'''
+        echo 'Testing 123'
       }
     }
-    stage('Testing') {
+    stage('Test') {
       steps {
         parallel(
           "Chrome": {
@@ -18,7 +22,7 @@ pipeline {
 
           },
           "Safari": {
-            echo 'testing in safari'
+            echo 'Safari'
 
           }
         )
